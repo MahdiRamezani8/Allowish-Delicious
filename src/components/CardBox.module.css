@@ -1,0 +1,17 @@
+.cardBox {
+  width: 100%;
+  max-width: 768px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+  gap: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .cardBox {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: var(--space-lg);
+  }
+}

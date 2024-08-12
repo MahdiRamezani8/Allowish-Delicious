@@ -1,0 +1,8 @@
+.stars {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.stars img {
+  width: 15px;
+}

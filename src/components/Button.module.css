@@ -1,0 +1,49 @@
+.btn {
+  border: 0;
+  background-color: transparent;
+  padding: var(--padding-sm);
+  border-radius: calc(46px / 2);
+  cursor: pointer;
+}
+
+.btn img {
+  width: var(--font-size-ms);
+}
+
+.primary {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.white {
+  height: 3rem;
+  width: 3rem;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-gray);
+  border-radius: 50%;
+}
+
+.underline {
+  text-decoration: underline;
+  text-transform: capitalize;
+  font-size: var(--font-size-sm);
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  padding: 0;
+  font-size: var(--font-size-md);
+}
+
+.pagination,
+.social {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-low);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

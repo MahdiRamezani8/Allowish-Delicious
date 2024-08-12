@@ -1,0 +1,7 @@
+.label {
+  width: 8rem;
+}
+
+.label.lg {
+  width: 14rem;
+}

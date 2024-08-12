@@ -1,0 +1,32 @@
+{
+  "reviews": [
+    {
+      "name": "Selena Gomez",
+      "rate": "4.9",
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad necessitatibus praesentium deleniti temporibus tenetur nam facere quis obcaecati debitis maxime fugiat sint quod, magnam tempora ducimus numquam error voluptates quisquam",
+      "profile": "Assests/Review1.jpg",
+      "id": 432565477698354678
+    },
+    {
+      "name": "Kendrick Lamar",
+      "rate": "3.1",
+      "comment": ". Ad necessitatibus praesentium deleniti temporibus tenetur nam facere quis obcaecati debitis maxime fugiat sint quod, magnam tempora ducimus numquam error voluptates quisquam",
+      "profile": "Assests/Review2.jpg",
+      "id": 1234567
+    },
+    {
+      "name": "Jonas schmedtmann",
+      "rate": "2.9",
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad necessitatibus praesentium deleniti temporibus tenetur nam facere quis obcaecati debitis maxime fugiat sint quod, magnam tempora ducimus numquam error voluptates quisquam",
+      "profile": "Assests/Review3.jpg",
+      "id": 4677890
+    },
+    {
+      "name": "Charles Bukowski",
+      "rate": "5",
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad necessitatibus praesentium deleniti temporibus tenetur nam facere quis obcaecati debitis maxime fugiat sint quod, magnam tempora ducimus numquam error voluptates quisquam",
+      "profile": "Assests/Review4.jpg",
+      "id": 456897867434674657
+    }
+  ]
+}
