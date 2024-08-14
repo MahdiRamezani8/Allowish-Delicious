@@ -42,7 +42,7 @@
   align-items: center;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .card {
     margin-bottom: 0;
     margin-top: var(--space-lg);
@@ -51,5 +51,11 @@
   .card .image img {
     width: 100px;
     filter: drop-shadow(0 30px 20px #0000008c);
+  }
+}
+
+@media (width <= 768px) {
+  .card:first-child {
+    margin-top: 100px;
   }
 }

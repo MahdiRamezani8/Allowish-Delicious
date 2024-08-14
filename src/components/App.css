@@ -39,6 +39,7 @@
   --font-size-ms: 2.4rem;
   --font-size-md: 2.8rem;
   --font-size-lg: 3.6rem;
+  --font-size-xl: 4.6rem;
 
   --shadow-low: 10px 10px 30px hsla(0, 0%, 0%, 0.239),
     -10px -10px 10px hsl(0, 0%, 100%);
@@ -80,7 +81,7 @@ h3 {
 }
 
 h1 {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
 }
 
 h2 {

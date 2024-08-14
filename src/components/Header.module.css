@@ -1,14 +1,16 @@
 .header {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-lg);
   background-color: var(--color-silver);
   padding-inline: var(--padding-sm);
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: 50px 1fr;
+  place-content: center;
 }
 
 .hero {
+  width: 100%;
   max-width: 1024px;
   display: grid;
   grid-template-columns: 1fr;
@@ -33,15 +35,23 @@
   max-width: 40ch;
 }
 
-.hero .heroTitle div{
+.hero .heroTitle div {
   display: flex;
   gap: var(--space-sm);
 }
 
 @media (min-width: 768px) {
+  .header {
+    height: 100dvh;
+  }
+
   .hero {
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: 1fr;
+  }
+
+  .hero .heroImage {
+    justify-self: end;
   }
 
   .hero .heroTitle {
