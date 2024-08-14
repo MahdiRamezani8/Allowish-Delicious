@@ -4,7 +4,7 @@ function Label({size}) {
   return (
     <img
       className={`${styles.label} ${styles[size]}`}
-      src="../../public/Assests/Label.svg"
+      src="Assests/Label.svg"
       alt="label"
     ></img>
   );

@@ -19,7 +19,7 @@ function Header() {
           </div>
         </section>
         <section className={styles.heroImage}>
-          <img src="../../public/Assests/Coffe1.svg" alt="" />
+          <img src="Assests/Coffe1.svg" alt="" />
         </section>
       </section>
     </header>

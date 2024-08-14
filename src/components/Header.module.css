@@ -33,6 +33,11 @@
   max-width: 40ch;
 }
 
+.hero .heroTitle div{
+  display: flex;
+  gap: var(--space-sm);
+}
+
 @media (min-width: 768px) {
   .hero {
     grid-template-columns: repeat(2, 50%);
