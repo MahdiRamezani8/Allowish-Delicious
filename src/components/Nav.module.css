@@ -4,8 +4,83 @@
   display: flex;
   justify-content: space-between;
   padding-inline: var(--padding-sm);
+  padding-block: 1rem;
 }
 
-.nav .menu {
+.nav li {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.nav li:hover {
+  transform: translateY(-1px);
+}
+
+.nav li.active {
+  border-bottom: 1px solid var(--color-black);
+}
+
+.DE {
   display: none;
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+.DEBtns {
+  display: flex;
+}
+
+.DEBtns button {
+  transform: scale(0.9);
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.MB {
+  width: 28rem;
+  padding: var(--padding-md);
+  padding-top: var(--padding-xl);
+  background-color: var(--color-silver-blur);
+  position: absolute;
+  top: 0;
+
+  right: -100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  list-style: none;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-low);
+  transition: right 0.3s;
+}
+
+.MB.open {
+  right: 0;
+}
+
+.MBListItem {
+  width: 100%;
+  font-weight: bold;
+  border-bottom: 2px solid var(--color-gray);
+}
+
+.MBListItem:not(:last-child) {
+  margin-bottom: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .DE {
+    display: flex;
+  }
+
+  .MB,
+  .btns {
+    display: none;
+  }
 }

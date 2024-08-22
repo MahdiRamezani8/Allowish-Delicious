@@ -81,10 +81,10 @@ function Pagination({ swiper }) {
   return (
     <div className={styles.pagination}>
       <Button type="pagination" event={prevSlide}>
-        <img src="Assests/angle-left.svg" alt="<=" />
+        <img src="Assests/left.svg" alt="<=" />
       </Button>
       <Button type="pagination" event={nextSlide}>
-        <img src="Assests/angle-right.svg" alt="=>" />
+        <img src="Assests/right.svg" alt="=>" />
       </Button>
     </div>
   );

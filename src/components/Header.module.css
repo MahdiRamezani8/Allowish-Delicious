@@ -5,8 +5,9 @@
 
   display: grid;
   grid-auto-flow: column;
-  grid-template-rows: 50px 1fr;
+  grid-template-rows: auto 1fr;
   place-content: center;
+  gap: var(--padding-md);
 }
 
 .hero {
@@ -38,6 +39,7 @@
 .hero .heroTitle div {
   display: flex;
   gap: var(--space-sm);
+  justify-content: center;
 }
 
 @media (min-width: 768px) {
@@ -52,6 +54,7 @@
 
   .hero .heroImage {
     justify-self: end;
+    max-width: 400px;
   }
 
   .hero .heroTitle {
