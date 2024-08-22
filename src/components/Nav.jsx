@@ -15,11 +15,11 @@ function Nav() {
       <Label />
       <span className={styles.btns}>
         <Button type="white">
-          <img src="public/Assests/BasketIcon.svg" alt="" />
+          <img src="Assests/BasketIcon.svg" alt="" />
         </Button>
         <Button type="menu" event={handleToggleMenu}>
           <img
-            src={`public/Assests/${isMenuOpen ? "close" : "open"}.svg`}
+            src={`Assests/${isMenuOpen ? "close" : "open"}.svg`}
             alt="menu"
           />
         </Button>
@@ -32,18 +32,13 @@ function Nav() {
         <li className={styles.DEListItem}>Alowish Catering</li>
         <li className={styles.DEBtns}>
           <Button type="white">
-            <img src="public/Assests/BasketIcon.svg" alt="" />
+            <img src="Assests/BasketIcon.svg" alt="" />
           </Button>
           <Button type="primary">buy gift vouchers</Button>
         </li>
       </ul>
 
       <ul className={`${styles.MB} ${isMenuOpen ? styles.open : ""}`}>
-        {/* <li className={styles.MBListItem}>
-          <Button type="close" event={handleCloseMenu}>
-            &#10006;
-          </Button>
-        </li> */}
         <li className={styles.MBListItem}>Cafe Menu</li>
         <li className={styles.MBListItem}>About Us</li>
         <li className={styles.MBListItem}>Find Us</li>
