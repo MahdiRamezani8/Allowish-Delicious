@@ -18,6 +18,7 @@
 :root {
   --color-black: hsl(240, 4%, 11%);
   --color-gray: hsl(240, 3%, 40%);
+  --color-gray-blur: hsla(240, 3%, 40%, 0.39);
   --color-silver: hsl(220, 10%, 94%);
   --color-silver-blur: hsla(220, 10%, 94%, 0.431);
   --color-silver-lt: hsl(210, 9%, 96%);
@@ -45,10 +46,10 @@
   --font-size-xl: 4.6rem;
 
   --shadow-low: 10px 10px 30px hsla(0, 0%, 0%, 0.239),
-    -10px -10px 10px hsl(0, 0%, 100%);
+    -10px -10px 10px hsla(0, 0%, 100%, 0.454);
 
   --shadow-to-low: 10px 10px 30px hsla(0, 0%, 0%, 0.111),
-    -10px -10px 10px hsl(0, 0%, 100%);
+    -10px -10px 10px hsla(0, 0%, 100%, 0.286);
 
   --shadow-high: 10px 10px 30px hsla(0, 0%, 0%, 0.571),
     -10px -10px 10px hsl(0, 0%, 93%);

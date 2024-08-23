@@ -3,7 +3,7 @@ import styles from "./Nav.module.css";
 import Button from "./Button";
 import Label from "./Label";
 
-function Nav() {
+function Nav({ isVisible }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function handleToggleMenu() {
@@ -11,7 +11,7 @@ function Nav() {
   }
 
   return (
-    <nav className={styles.nav}>
+    <nav className={`${styles.nav} ${isVisible ? styles.fixed : ""}`}>
       <Label />
       <span className={styles.btns}>
         <Button type="white">
