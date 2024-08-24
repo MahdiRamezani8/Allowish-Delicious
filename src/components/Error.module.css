@@ -1,0 +1,34 @@
+/* .error {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  place-items: center;
+}
+
+.error h1 {
+  grid-column: 1/-1;
+  grid-row: 1;
+} */
+
+.error {
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.error div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.error h1 {
+  font-size: var(--font-size-lg);
+}
+
+.error p {
+  font-size: var(--font-size-ms);
+}

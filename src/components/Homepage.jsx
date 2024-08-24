@@ -14,8 +14,6 @@ import ShopCard from "./ShopCard";
 function Homepage() {
   return (
     <>
-      <Header />
-
       <Wrapper type="block">
         <WrapperTitle type="block">
           <h2>Explore Our Alowishus</h2>
@@ -116,7 +114,6 @@ function Homepage() {
           <Reviews />
         </ReviewsProvider>
       </Wrapper>
-      <Footer></Footer>
     </>
   );
 }
