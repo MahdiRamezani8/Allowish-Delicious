@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "../Button/Button";
 import styles from "./Error.module.css";
 import { useNavigate, useRouteError } from "react-router-dom";
 

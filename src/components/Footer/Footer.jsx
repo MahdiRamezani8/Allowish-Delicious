@@ -1,6 +1,6 @@
 import styles from "./Footer.module.css";
-import Label from "./Label";
-import Button from "./Button";
+import Label from "../Label/Label";
+import Button from "../Button/Button";
 
 function Footer() {
   return (

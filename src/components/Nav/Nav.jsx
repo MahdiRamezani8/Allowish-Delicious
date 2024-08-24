@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./Nav.module.css";
-import Button from "./Button";
-import Label from "./Label";
+import Button from "../Button/Button";
+import Label from "../Label/Label";
 
 function Nav({ isVisible }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

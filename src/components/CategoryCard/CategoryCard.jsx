@@ -1,5 +1,5 @@
 import styles from "./CategoryCard.module.css";
-import Button from "./Button";
+import Button from "../Button/Button";
 
 function CategoryCard({ title, desc, icon, btn }) {
   return (

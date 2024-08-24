@@ -1,5 +1,5 @@
 import styles from "./ShopCard.module.css";
-import Button from "./Button";
+import Button from "../Button/Button";
 
 function ShopCard({ img, rank, title, desc, price }) {
   return (

@@ -1,6 +1,6 @@
 import styles from "./Header.module.css";
-import Button from "./Button";
-import Nav from "./Nav";
+import Button from "../Button/Button";
+import Nav from "../Nav/Nav";
 import { useEffect, useRef, useState } from "react";
 
 function Header() {

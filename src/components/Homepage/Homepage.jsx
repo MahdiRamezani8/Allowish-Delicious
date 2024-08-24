@@ -1,15 +1,13 @@
-import { ReviewsProvider } from "../contexts/ReviewsContext";
+import { ReviewsProvider } from "../../contexts/ReviewsContext";
 
-import Button from "./Button";
-import CategoryCard from "./CategoryCard";
-import CardBox from "./CardBox";
-import Footer from "./Footer";
-import Header from "./Header";
-import Reviews from "./Reviews";
-import Wrapper from "./Wrapper";
-import WrapperImage from "./WrapperImage";
-import WrapperTitle from "./WrapperTitle";
-import ShopCard from "./ShopCard";
+import Button from "../Button/Button";
+import CategoryCard from "../CategoryCard/CategoryCard";
+import CardBox from "../CardBox/CardBox";
+import Reviews from "../Reviews/Reviews";
+import Wrapper from "../Wrapper/Wrapper";
+import WrapperImage from "../WrapperImage/WrapperImage";
+import WrapperTitle from "../WrapperTitle/WrapperTitle";
+import ShopCard from "../ShopCard/ShopCard";
 
 function Homepage() {
   return (

@@ -1,5 +1,5 @@
 import styles from "./Slide.module.css";
-import Stars from "./Stars";
+import Stars from "../Stars/Stars";
 
 function Slide({ review: { name, rate, comment, profile } }) {
   return (

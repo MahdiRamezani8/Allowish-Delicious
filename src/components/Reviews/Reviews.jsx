@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useReviews } from "../contexts/ReviewsContext";
-import Loader from "./Loader";
-import Slide from "./Slide";
+import { useReviews } from "../../contexts/ReviewsContext";
+import Loader from "../Loader/Loader";
+import Slide from "../Slide/Slide";
 import styles from "./Reviews.module.css";
-import Stars from "./Stars";
-import Button from "./Button";
+import Stars from "../Stars/Stars";
+import Button from "../Button/Button";
 import "swiper/css";
 
 function Reviews() {
