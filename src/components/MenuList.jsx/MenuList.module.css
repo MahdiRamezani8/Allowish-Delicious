@@ -1,0 +1,22 @@
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  border: 5px solid var(--color-black);
+  border-radius: 1rem;
+  padding: var(--padding-sm) var(--padding-md);
+  width: 100%;
+  padding-top: var(--padding-xl);
+}
+
+.menuList h1 {
+  position: absolute;
+  background-color: var(--color-black);
+  color: var(--color-silver-lt);
+  padding: var(--padding-sm) var(--padding-md);
+  top: -45px;
+  left: -10px;
+  border-radius: 2rem;
+  transform: scale(0.7);
+}

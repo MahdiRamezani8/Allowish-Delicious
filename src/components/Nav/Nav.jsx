@@ -2,8 +2,11 @@ import { useState } from "react";
 import styles from "./Nav.module.css";
 import Button from "../Button/Button";
 import Label from "../Label/Label";
+import { useMenu } from "../../contexts/MenuContext";
 
 function Nav({ isVisible }) {
+  const { cart } = useMenu();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function handleToggleMenu() {

@@ -1,0 +1,9 @@
+.menu {
+  width: 100%;
+  margin-top: var(--space-lg);
+  padding: var(--padding-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  align-items: flex-start;
+}

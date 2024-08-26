@@ -4,6 +4,7 @@ import AppLayout from "./AppLayout/AppLayout";
 import Error from "./Error/Error";
 import "./App.css";
 import Menu from "./Menu/Menu";
+import { MenuProvider } from "../contexts/MenuContext";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/menu",
-        element: <Menu />,
+        element: (
+          <MenuProvider>
+            <Menu />
+          </MenuProvider>
+        ),
       },
     ],
   },
