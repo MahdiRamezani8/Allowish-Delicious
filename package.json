@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "json-server -w ./src/fake-database/reviews.json --port 9000"
+    "server": "json-server -w ./src/fake-database/database.json --port 9000"
   },
   "dependencies": {
     "json-server": "^1.0.0-beta.1",

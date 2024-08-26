@@ -3,6 +3,7 @@ import Homepage from "./Homepage/Homepage";
 import AppLayout from "./AppLayout/AppLayout";
 import Error from "./Error/Error";
 import "./App.css";
+import Menu from "./Menu/Menu";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Homepage />,
+      },
+      {
+        path: "/menu",
+        element: <Menu />,
       },
     ],
   },
