@@ -3,18 +3,20 @@ import styles from "./Nav.module.css";
 import Button from "../Button/Button";
 import Label from "../Label/Label";
 import { useMenu } from "../../contexts/MenuContext";
+import { useNav } from "../../contexts/NavContext";
 
-function Nav({ isVisible }) {
+function Nav() {
   const { cart } = useMenu();
-
+  const { isNavVisible } = useNav();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function handleToggleMenu() {
     setIsMenuOpen((status) => !status);
   }
+  console.log(isNavVisible);
 
   return (
-    <nav className={`${styles.nav} ${isVisible ? styles.fixed : ""}`}>
+    <nav className={`${styles.nav} ${!isNavVisible ? styles.fixed : ""}`}>
       <Label />
       <span className={styles.btns}>
         <Button type="white">

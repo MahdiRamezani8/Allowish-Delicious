@@ -8,10 +8,12 @@ import Wrapper from "../Wrapper/Wrapper";
 import WrapperImage from "../WrapperImage/WrapperImage";
 import WrapperTitle from "../WrapperTitle/WrapperTitle";
 import ShopCard from "../ShopCard/ShopCard";
+import Header from "../Header/Header";
 
 function Homepage() {
   return (
     <>
+      <Header />
       <Wrapper type="block">
         <WrapperTitle type="block">
           <h2>Explore Our Alowishus</h2>

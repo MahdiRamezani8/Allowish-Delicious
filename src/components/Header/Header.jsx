@@ -1,35 +1,13 @@
 import styles from "./Header.module.css";
 import Button from "../Button/Button";
-import Nav from "../Nav/Nav";
-import { useEffect, useRef, useState } from "react";
+import { useNav } from "../../contexts/NavContext";
+import { Link } from "react-router-dom";
 
 function Header() {
-  const [isNavVisible, setIsNavVisible] = useState(null);
-  const headerRef = useRef();
-
-  function observerCallBack([entry]) {
-    console.log(entry.isIntersecting);
-
-    if (entry.isIntersecting) setIsNavVisible(false);
-    if (!entry.isIntersecting) setIsNavVisible(true);
-  }
-
-  useEffect(() => {
-    const el = headerRef.current;
-
-    const observer = new IntersectionObserver(observerCallBack, {
-      root: null,
-      threshold: 0.5,
-    });
-
-    if (el) observer.observe(el);
-
-    return () => el && observer.unobserve(el);
-  }, []);
+  const { headerRef } = useNav();
 
   return (
     <header className={styles.header} ref={headerRef}>
-      <Nav isVisible={isNavVisible} />
       <section className={styles.hero}>
         <section className={styles.heroTitle}>
           <h1>Alowishus Delicious Coffee </h1>
@@ -39,7 +17,9 @@ function Header() {
           </p>
           <div>
             <Button type="primary">DOWNLOAD APP</Button>
-            <Button type="underline">SHOP COFFE</Button>
+            <Link to="/menu">
+              <Button type="underline">SHOP COFFE</Button>
+            </Link>
           </div>
         </section>
         <section className={styles.heroImage}>
