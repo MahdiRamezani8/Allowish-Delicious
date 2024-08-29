@@ -13,7 +13,6 @@ function Nav() {
   function handleToggleMenu() {
     setIsMenuOpen((status) => !status);
   }
-  console.log(isNavVisible);
 
   return (
     <nav className={`${styles.nav} ${!isNavVisible ? styles.fixed : ""}`}>

@@ -5,10 +5,8 @@ export const NavContext = createContext();
 function NavProvider({ children }) {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const headerRef = useRef();
-  console.log("💰", isNavVisible);
 
   function observerCallBack([entry]) {
-    console.log(entry.isIntersecting);
 
     if (entry.isIntersecting) setIsNavVisible(true);
     if (!entry.isIntersecting) setIsNavVisible(false);

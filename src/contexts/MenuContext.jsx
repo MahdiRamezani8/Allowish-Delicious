@@ -33,7 +33,13 @@ function reducer(state, action) {
       return {
         ...state,
         cart: state.cart.map((item) =>
-          item.id === action.payload ? item.quantity++ : ""
+          item.item === action.payload
+            ? {
+                ...item,
+                quantity: item.quantity + 1,
+                totalPrice: Number(item.totalPrice) + Number(item.price),
+              }
+            : item
         ),
       };
     case "menu/decreasQuantity":
@@ -54,6 +60,8 @@ function MenuProvider({ children }) {
     initialState
   );
 
+  console.log(cart);
+
   useEffect(() => {
     async function fetchData() {
       try {
@@ -71,18 +79,27 @@ function MenuProvider({ children }) {
   function dataRecived(data) {
     dispatch({ type: "menu/dataRecived", payload: data });
   }
-  
-  function addItem(id) {
-    const newItem = "";
-    dispatch({ type: "menu/addItem", payload: newItem });
+
+  function addItem(newItem) {
+    const existingItemInCart = cart.find((item) => item.item === newItem.item);
+    console.log(existingItemInCart);
+
+    if (existingItemInCart) increaseQuantity(newItem.item);
+    else
+      dispatch({
+        type: "menu/addItem",
+        payload: { ...newItem, quantity: 1, totalPrice: newItem.price },
+      });
   }
-  
+
   function deleteItem(id) {
     dispatch({ type: "menu/deleteItem", payload: id });
   }
-  
-  function increaseQuantity(id) {
-    dispatch({ type: "menu/increaseQuantity", payload: id });
+
+  function increaseQuantity(itemName) {
+    console.log(itemName);
+
+    dispatch({ type: "menu/increaseQuantity", payload: itemName });
   }
 
   function decreasQuantity(id) {
