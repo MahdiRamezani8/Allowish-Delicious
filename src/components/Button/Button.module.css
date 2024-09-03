@@ -35,7 +35,8 @@
   align-items: center;
 }
 
-.menu {
+.menu,
+.circle {
   background-color: var(--color-black);
   height: 4.7rem;
   width: 4.7rem;
@@ -45,6 +46,11 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+}
+
+.circle {
+  color: var(--color-white);
+  font-size: var(--font-size-ms);
 }
 
 .menu img {
@@ -62,8 +68,17 @@
   justify-content: center;
 }
 
-.error {
-  background-color: rgb(255, 68, 68);
+.error,
+.red {
+  background-color: rgb(255, 37, 37);
   color: var(--color-white);
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0.9;
+}
+
+.red {
+  text-transform: uppercase;
 }

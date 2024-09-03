@@ -6,14 +6,7 @@ const MenuContext = createContext();
 
 const initialState = {
   items: [],
-  cart: [
-    {
-      item: "americano",
-      quantity: 3,
-      totalPrice: 15,
-      priceUnit: "dollor",
-    },
-  ],
+  cart: [],
   isLoading: false,
   error: false,
 };
@@ -27,7 +20,7 @@ function reducer(state, action) {
     case "menu/deleteItem":
       return {
         ...state,
-        cart: state.cart.filter((item) => item.id !== action.payload),
+        cart: state.cart.filter((item) => item.item !== action.payload),
       };
     case "menu/increaseQuantity":
       return {
@@ -60,8 +53,6 @@ function MenuProvider({ children }) {
     initialState
   );
 
-  console.log(cart);
-
   useEffect(() => {
     async function fetchData() {
       try {
@@ -92,8 +83,8 @@ function MenuProvider({ children }) {
       });
   }
 
-  function deleteItem(id) {
-    dispatch({ type: "menu/deleteItem", payload: id });
+  function deleteItem(itemName) {
+    dispatch({ type: "menu/deleteItem", payload: itemName });
   }
 
   function increaseQuantity(itemName) {
