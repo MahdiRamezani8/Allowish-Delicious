@@ -6,7 +6,7 @@ function MenuItem({ item: { item, price, priceUnit, image } }) {
     addItem,
     deleteItem,
     increaseQuantity,
-    decreasQuantity,
+    decreaseQuantity,
     getExistingItemInCart,
   } = useMenu();
 
@@ -22,7 +22,7 @@ function MenuItem({ item: { item, price, priceUnit, image } }) {
         </b>
       </div>
 
-      <div>
+      <div className={styles.options}>
         {!existingItemInCart ? (
           <Button
             type="primary"
@@ -35,8 +35,8 @@ function MenuItem({ item: { item, price, priceUnit, image } }) {
             <Button type="red" event={() => deleteItem(item)}>
               remove
             </Button>
-            <div>
-              <Button type="circle" event={() => decreasQuantity(item)}>
+            <div className={styles.quantity}>
+              <Button type="circle" event={() => decreaseQuantity(item)}>
                 -
               </Button>
               <b>{existingItemInCart.quantity}</b>

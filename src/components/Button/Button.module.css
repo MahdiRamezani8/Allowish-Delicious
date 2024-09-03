@@ -40,12 +40,15 @@
   background-color: var(--color-black);
   height: 4.7rem;
   width: 4.7rem;
-  z-index: 999;
-  transition: transform 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+}
+
+.menu {
+  transition: transform 0.3s;
+  z-index: 999;
 }
 
 .circle {

@@ -35,7 +35,7 @@ function reducer(state, action) {
             : item
         ),
       };
-    case "menu/decreasQuantity":
+    case "menu/decreaseQuantity":
       return {
         ...state,
         cart: state.cart.map((item) =>
@@ -99,10 +99,10 @@ function MenuProvider({ children }) {
     dispatch({ type: "menu/increaseQuantity", payload: itemName });
   }
 
-  function decreasQuantity(itemName) {
+  function decreaseQuantity(itemName) {
     const existingItemInCart = getExistingItemInCart(itemName);
     if (existingItemInCart.quantity <= 1) return deleteItem(itemName);
-    dispatch({ type: "menu/decreasQuantity", payload: itemName });
+    dispatch({ type: "menu/decreaseQuantity", payload: itemName });
   }
 
   return (
@@ -116,7 +116,7 @@ function MenuProvider({ children }) {
         addItem,
         deleteItem,
         increaseQuantity,
-        decreasQuantity,
+        decreaseQuantity,
       }}
     >
       {children}
