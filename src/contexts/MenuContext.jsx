@@ -39,7 +39,13 @@ function reducer(state, action) {
       return {
         ...state,
         cart: state.cart.map((item) =>
-          item.id === action.payload ? item.quantity-- : ""
+          item.item === action.payload
+            ? {
+                ...item,
+                quantity: item.quantity - 1,
+                totalPrice: Number(item.totalPrice) - Number(item.price),
+              }
+            : item
         ),
       };
     default:
@@ -67,14 +73,16 @@ function MenuProvider({ children }) {
     fetchData();
   }, []);
 
+  function getExistingItemInCart(itemName) {
+    return cart.find((item) => item.item === itemName);
+  }
+
   function dataRecived(data) {
     dispatch({ type: "menu/dataRecived", payload: data });
   }
 
   function addItem(newItem) {
-    const existingItemInCart = cart.find((item) => item.item === newItem.item);
-    console.log(existingItemInCart);
-
+    const existingItemInCart = getExistingItemInCart(newItem.item);
     if (existingItemInCart) increaseQuantity(newItem.item);
     else
       dispatch({
@@ -88,13 +96,13 @@ function MenuProvider({ children }) {
   }
 
   function increaseQuantity(itemName) {
-    console.log(itemName);
-
     dispatch({ type: "menu/increaseQuantity", payload: itemName });
   }
 
-  function decreasQuantity(id) {
-    dispatch({ type: "menu/decreasQuantity", payload: id });
+  function decreasQuantity(itemName) {
+    const existingItemInCart = getExistingItemInCart(itemName);
+    if (existingItemInCart.quantity <= 1) return deleteItem(itemName);
+    dispatch({ type: "menu/decreasQuantity", payload: itemName });
   }
 
   return (
@@ -104,6 +112,7 @@ function MenuProvider({ children }) {
         items,
         isLoading,
         error,
+        getExistingItemInCart,
         addItem,
         deleteItem,
         increaseQuantity,

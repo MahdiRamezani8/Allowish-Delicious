@@ -2,8 +2,15 @@ import styles from "./MenuItem.module.css";
 import Button from "../Button/Button";
 import { useMenu } from "../../contexts/MenuContext";
 function MenuItem({ item: { item, price, priceUnit, image } }) {
-  const { addItem, cart, deleteItem } = useMenu();
-  const isItemInTheCart = cart.find((cartItem) => cartItem.item === item);
+  const {
+    addItem,
+    deleteItem,
+    increaseQuantity,
+    decreasQuantity,
+    getExistingItemInCart,
+  } = useMenu();
+
+  const existingItemInCart = getExistingItemInCart(item);
 
   return (
     <li className={styles.menuListItem}>
@@ -16,7 +23,7 @@ function MenuItem({ item: { item, price, priceUnit, image } }) {
       </div>
 
       <div>
-        {!isItemInTheCart ? (
+        {!existingItemInCart ? (
           <Button
             type="primary"
             event={() => addItem({ item, price, priceUnit })}
@@ -28,6 +35,15 @@ function MenuItem({ item: { item, price, priceUnit, image } }) {
             <Button type="red" event={() => deleteItem(item)}>
               remove
             </Button>
+            <div>
+              <Button type="circle" event={() => decreasQuantity(item)}>
+                -
+              </Button>
+              <b>{existingItemInCart.quantity}</b>
+              <Button type="circle" event={() => increaseQuantity(item)}>
+                +
+              </Button>
+            </div>
           </>
         )}
       </div>
