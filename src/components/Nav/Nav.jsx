@@ -2,11 +2,9 @@ import { useState } from "react";
 import styles from "./Nav.module.css";
 import Button from "../Button/Button";
 import Label from "../Label/Label";
-import { useMenu } from "../../contexts/MenuContext";
 import { useNav } from "../../contexts/NavContext";
 
 function Nav() {
-  const { cart } = useMenu();
   const { isNavVisible } = useNav();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -18,7 +16,7 @@ function Nav() {
     <nav className={`${styles.nav} ${!isNavVisible ? styles.fixed : ""}`}>
       <Label />
       <span className={styles.btns}>
-        <Button type="white">
+        <Button type="white" to="cart">
           <img src="Assests/BasketIcon.svg" alt="" />
         </Button>
         <Button type="menu" event={handleToggleMenu}>
@@ -35,7 +33,7 @@ function Nav() {
         <li className={styles.DEListItem}>Find Us</li>
         <li className={styles.DEListItem}>Alowish Catering</li>
         <li className={styles.DEBtns}>
-          <Button type="white">
+          <Button type="white" to="cart">
             <img src="Assests/BasketIcon.svg" alt="" />
           </Button>
           <Button type="primary">buy gift vouchers</Button>

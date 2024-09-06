@@ -5,6 +5,7 @@ import Error from "./Error/Error";
 import "./App.css";
 import Menu from "./Menu/Menu";
 import { MenuProvider } from "../contexts/MenuContext";
+import Cart from "./Cart/Cart";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,14 @@ const router = createBrowserRouter([
         element: (
           <MenuProvider>
             <Menu />
+          </MenuProvider>
+        ),
+      },
+      {
+        path: "/cart",
+        element: (
+          <MenuProvider>
+            <Cart />
           </MenuProvider>
         ),
       },
